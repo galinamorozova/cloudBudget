@@ -506,7 +506,6 @@ nav a + a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 100px;
   }
 }
 
@@ -519,18 +518,30 @@ nav a + a {
       justify-content: space-around;
 }
 
+@media (max-width: 980px) {
+  .technology-block__components .technology-block__components__section {
+    margin-bottom: 6.25rem;
+  }
+}
+
 @media (max-width: 700px) {
   .technology-block__components .technology-block__components__section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 50px;
+    margin-bottom: 0;
   }
 }
 
 .technology-block__components div {
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .technology-block__components div {
+    margin-bottom: 3.125rem;
+  }
 }
 
 .technology-block__components h4 {
@@ -556,28 +567,25 @@ nav a + a {
 @media (max-width: 700px) {
   .technology-block__components__element__text {
     width: 18.75rem;
-    top: 2.8125rem;
+    top: 3.4375rem;
     left: 0.625rem;
   }
 }
 
 @media (max-width: 670px) {
   .technology-block__components__element__text {
-    top: 2.8125rem;
     left: -1.5625rem;
   }
 }
 
 @media (max-width: 510px) {
   .technology-block__components__element__text {
-    top: 2.8125rem;
     left: -2.8125rem;
   }
 }
 
 @media (max-width: 410px) {
   .technology-block__components__element__text {
-    top: 2.8125rem;
     left: -4.6875rem;
   }
 }
@@ -639,7 +647,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.5rem;
 }
 
 @media (max-width: 550px) {
@@ -654,6 +661,7 @@ form input {
   border-radius: 6px;
   font-size: 0.875rem;
   padding-left: 1.9375rem;
+  margin-bottom: 1.5rem;
 }
 
 form input[placeholder="First Name"] {
@@ -675,7 +683,6 @@ form .name {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 30px;
     margin-top: 20px;
   }
 }
@@ -811,7 +818,7 @@ footer p:last-of-type {
   .footer-elements {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 
