@@ -49,7 +49,7 @@ h1 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   h1 {
     font-size: 32px;
   }
@@ -145,6 +145,12 @@ h5 {
   height: 50px;
   cursor: pointer;
   z-index: 99999;
+}
+
+@media (min-width: 512px) {
+  .burger {
+    display: none;
+  }
 }
 
 .burger span, .burger span:before, .burger span:after {
@@ -308,34 +314,6 @@ nav a + a {
 }
 
 @media (max-width: 511px) {
-  nav a + a {
-    margin-left: 10px;
-  }
-}
-
-@media (max-width: 511px) {
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (max-width: 411px) {
-  nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (max-width: 320px) {
   nav {
     display: none;
   }
@@ -369,7 +347,7 @@ nav a + a {
   font-weight: 400;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 511px) {
   .title-block__text__navigation__button {
     display: none;
   }

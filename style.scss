@@ -45,7 +45,7 @@ h1 {
     @media (max-width: 768px) {
         font-size: 52px;
     }
-    @media (max-width: 320px) {
+    @media (max-width: 420px) {
         font-size: 32px;
     }
 }
@@ -116,6 +116,10 @@ h5 {
     height: 50px;
     cursor: pointer;
     z-index: 99999;
+
+    @media (min-width: 512px) {
+       display: none;
+    }
   }
   .burger span, .burger span:before, .burger span:after{
     width: 100%;
@@ -229,20 +233,9 @@ nav {
 
     a + a {
         margin-left: 14px;
-        @media (max-width: 511px) {
-            margin-left: 10px;
-        }
     }
     
     @media (max-width: 511px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    @media (max-width: 411px) {
-        flex-direction: column;
-    }
-    @media (max-width: 320px) {
         display: none;
     }
 }
@@ -269,7 +262,7 @@ nav {
     font-weight: 400;
 
 
-    @media (max-width: 320px) {
+    @media (max-width: 511px) {
         display: none;
     }
 }
