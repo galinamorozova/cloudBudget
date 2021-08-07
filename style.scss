@@ -15,13 +15,21 @@ body, h1, h2, h3, h4, h5, p, div, span, img, footer, a {
         font-size: 12px;
     }
 }
-a, button {
+a {
 
     text-decoration: none;
 
     &:hover {
         cursor: pointer;
         text-decoration:underline;
+    }
+}
+
+button {
+
+    &:hover {
+        cursor: pointer;
+        border-width:2px;
     }
 }
 
@@ -112,8 +120,8 @@ h5 {
     position: absolute;
     right: 10px;
     top: 10px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     z-index: 99999;
 
@@ -132,7 +140,7 @@ h5 {
   }
   .burger span:before{
     content: "";
-    top: -20px;
+    top: -13px;
     transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   .burger span{
@@ -140,7 +148,7 @@ h5 {
   }
   .burger span:after{
     content: "";
-    bottom: -20px;
+    bottom: -13px;
     transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -306,13 +314,17 @@ nav {
     font-weight: 700;
     line-height: 17px;
 
+    &:hover {
+        border-color:#a23843;
+    }
+
 }
 
 .overview-block {
     display: flex;
-
-    @media (max-width: 768px) {
-        padding: 20px;
+    padding: 95px 0;
+    @media (max-width: 400px) {
+        padding: 75px 0;
     }
 
     @media (max-width: 760px) {
@@ -322,25 +334,14 @@ nav {
     }
 
     .overview-block__img {
-        width: 445px;
-        height: 311px;
-        margin: 95px 0 95px 125px;
+        width: 41%;
+        margin-left: 125px;
 
-        @media (max-width: 820px) {
-            width: 345px;
-            height: 211px;
-        }
-        @media (max-width: 768px) {
-            margin: 95px 0 95px 20px;
-        }
         @media (max-width: 760px) {
-            margin: 40px 0 100px 0;
+            width: 90%;
+            margin-left: 0;
+            margin-top: 20px;
         }
-        @media (max-width: 350px) {
-            width: 300px;
-            height: 195px;
-        }
-
         img {
             width: 100%;
             object-fit: cover;
@@ -349,15 +350,11 @@ nav {
     }
 
     .overview-block__text{
-        width: 445px;
+        width: 41%;
 
 
     @media (max-width: 760px) {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    @media (max-width: 470px) {
-        width: 300px;
+        width: 90%;
     }
 
         p {
@@ -373,13 +370,8 @@ nav {
             font-weight: 400;
         }
         h3 {
-            margin-top: 140px;
-            @media (max-width: 1100px) {
-                margin-top: 120px;
-            }
-            @media (max-width: 320px) {
-                margin-top: 40px;
-            }
+
+            margin-top: 20px;
         }
     }
 }
@@ -388,7 +380,7 @@ nav {
     background: #FAFAFA;
     padding-top: 63px;
 
-    @media (max-width: 820px) {
+    @media (max-width: 920px) {
         flex-direction: column;
         align-items: center;
         padding-top: 25px;
@@ -398,7 +390,7 @@ nav {
         text-align: center;
         margin-bottom: 63px;
 
-        @media (max-width: 820px) {
+        @media (max-width: 920px) {
             margin-bottom: 23px;
         }
     }
@@ -407,7 +399,7 @@ nav {
     display: flex;
     justify-content:space-between;
 
-    @media (max-width: 820px) {
+    @media (max-width: 920px) {
         flex-direction: column;
         align-items: center;
     }
@@ -428,7 +420,7 @@ nav {
         @media (max-width: 1110px) { 
             width: 250px;
         }
-        @media (max-width: 820px) { 
+        @media (max-width: 920px) { 
             width: 350px;
         }
         @media (max-width: 350px) {
@@ -461,7 +453,7 @@ nav {
         width: 200px;
         padding: 15px 12px 15px 12px;
     }
-    @media (max-width: 820px) { 
+    @media (max-width: 920px) { 
         width: 293px;
         
     }
@@ -509,7 +501,7 @@ nav {
         justify-content: space-around;
 
 
-        @media (max-width: 700px) {
+        @media (max-width: 760px) {
             flex-direction: column;
             margin-bottom: 0;
         }
@@ -518,10 +510,10 @@ nav {
     div{
         text-align: center;
 
-        @media (max-width: 700px) {
+        @media (max-width: 760px) {
             margin-bottom: 50px;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 760px) {
             margin-bottom: -100px;
         }
 
@@ -546,7 +538,7 @@ nav {
     top: 68px;
     left: -38px;
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
         width: 300px;
         top: 55px;
         left: 10px;
@@ -584,6 +576,9 @@ nav {
     }
     
 }
+.first-group {
+    top: 61px;
+}
 
 .overview-block__second {
     background: #ED4C5C;
@@ -592,9 +587,18 @@ nav {
     h3, p {
         color:white;
     }
-    p{
-        line-height: 20px;
+
+    .overview-block__text{
+        p {
+            line-height: 20px;
+            margin: 60px 0 30px 0;
+
+            @media (max-width: 760px) {
+                margin: 40px 0 20px 0;
+            }
+        }
     }
+    
     h3{
         line-height: 43px;
     }
@@ -610,11 +614,6 @@ form {
     display: flex;
     flex-direction: column;
 
-
-    @media (max-width: 550px) {
-        width: 300px;
-    }
-
     input{
         height: 60px;
         border: 1px solid #333333;
@@ -622,10 +621,15 @@ form {
         font-size: 14px;
         padding-left: 31px;
         margin-bottom: 24px;
+
+    @media (max-width: 410px) {
+        padding-left: 11px;
+    }
     }
 
     input[placeholder="First Name"] {
         margin-right: 30px;
+
     }
 
     .name {
@@ -638,10 +642,16 @@ form {
         }
 
         input {
-            width: toRem(255);
+            width: 45%;
 
             @media (max-width: 550px) {
-                width: 266px;
+                width: 91%;
+             }
+             @media (max-width: 510px) {
+                width: 90%;
+             }
+             @media (max-width: 410px) {
+                width: 94%;
              }
 
             
@@ -651,11 +661,11 @@ form {
 }
 .contact-block {
     display: flex;
-
-    // @media (max-width: 550px) {
-    //     height: 580px;
-    // }
-
+    justify-content: space-between;
+    padding: 117px 0 94px 0;
+    @media (max-width: 400px) {
+        padding: 87px 0 64px 0;
+    }
 
     @media (max-width: 820px) {
         flex-direction: column;
@@ -663,38 +673,34 @@ form {
     }
 }
 .contact-block__text{
-    width: 445px;
-    margin-right: 114px;
+    width: 39%;
 
     @media (max-width: 820px) {
-        width: 540px;
+        width: 80%;
         text-align: center;
-        margin-right: 0;
     }
-    @media (max-width: 550px) {
-        width: 300px;
-    }
+  
 
     p{
         font-weight: 400;
         line-height: 20px;
+        @media (max-width: 820px) {
+           margin-bottom: 10px;
+         }
     }
     h3{
-        margin: 117px 0 55px 0;
+        margin: 15px 0 40px 0;
         @media (max-width: 320px) {
             margin: 40px;
         }
     }
 }
 .contact-block__form{
+    width: 50%;
 
-    form {
-        margin: 117px 0 94px 0;
-
-        @media (max-width: 768px) {
-            margin: 50px 0 50px 0;
+    @media (max-width: 820px) {
+        width: 80%;
         }
-    }
 }
 
 .contact-block__form__button {
@@ -706,6 +712,10 @@ form {
     color: white;
     padding: 16px 34px;
     text-transform: uppercase;
+
+    &:hover {
+        border-color:#a23843;
+    }
 
     @media (max-width: 820px) {
         margin-bottom: 20px;
