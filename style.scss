@@ -29,7 +29,7 @@ button {
 
     &:hover {
         cursor: pointer;
-        border-width:2px;
+        background-color:#d2868e;
     }
 }
 
@@ -80,7 +80,7 @@ h5 {
 
 }
 
-.container {
+.container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 1110px;
     margin: 0 auto;
 
@@ -597,6 +597,22 @@ nav {
                 margin: 40px 0 20px 0;
             }
         }
+
+        .overview-block__text_svg{
+            display: flex;
+        }
+
+        a {
+            .overview-block__text__first-img {
+                margin-top: 17px;
+            }
+        }
+        a {
+            .overview-block__text__last-img {
+                margin-top: 2px;
+            }
+        }
+        
     }
     
     h3{
@@ -785,7 +801,8 @@ footer{
 .footer-elements__svg{
     margin-top: 22px;
 
-    a + svg {
+    svg[width="12"] {
         margin: 0 14px;
     }
+
 }

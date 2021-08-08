@@ -25,7 +25,7 @@ a:hover {
 
 button:hover {
   cursor: pointer;
-  border-width: 2px;
+  background-color: #d2868e;
 }
 
 h2 {
@@ -88,43 +88,43 @@ h5 {
   font-weight: normal;
 }
 
-.container {
+.container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
   width: 1110px;
   margin: 0 auto;
 }
 
 @media (max-width: 1110px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 900px;
   }
 }
 
 @media (max-width: 920px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 750px;
   }
 }
 
 @media (max-width: 760px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 650px;
   }
 }
 
 @media (max-width: 670px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 500px;
   }
 }
 
 @media (max-width: 510px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 400px;
   }
 }
 
 @media (max-width: 410px) {
-  .container {
+  .container, .title-block__text__container, .overview-block__container, .technology-block__container, .overview-block__second__container, .contact-block__container, .footer__container {
     width: 300px;
   }
 }
@@ -789,6 +789,20 @@ nav a + a {
   }
 }
 
+.overview-block__second .overview-block__text .overview-block__text_svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overview-block__second .overview-block__text a .overview-block__text__first-img {
+  margin-top: 17px;
+}
+
+.overview-block__second .overview-block__text a .overview-block__text__last-img {
+  margin-top: 2px;
+}
+
 .overview-block__second h3 {
   line-height: 43px;
 }
@@ -1043,7 +1057,7 @@ footer p:last-of-type {
   margin-top: 22px;
 }
 
-.footer-elements__svg a + svg {
+.footer-elements__svg svg[width="12"] {
   margin: 0 14px;
 }
 /*# sourceMappingURL=style.css.map */
